@@ -14,7 +14,6 @@ const NuiHandler = () => {
     }, []);
 
     const eventListener = (event: any) => {
-        const data = event.data;
         switch (event.data.type) {
             case "SHOW_SKILLBAR":
                 dispatch(showSkillbar());

@@ -12,11 +12,14 @@ export const skillbarReducer = (state = initialState, action: AnyAction) => {
             return {
                 ...state,
                 show: true,
+                progress: 0,
             };
         case "CLOSE_SKILLBAR":
             return {
                 ...state,
-                show: false
+                show: false,
+                progress: 0,
+                dial: 0
             }
         case "RAISE_PROGRESS":
             return {

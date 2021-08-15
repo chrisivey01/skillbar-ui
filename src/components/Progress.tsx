@@ -11,7 +11,7 @@ const Progress = () => {
         if (progress < 100) {
             setTimeout(() => {
                 dispatch(raiseProgress(progress + 1))
-            }, Math.floor(Math.random() * 50))
+            }, Math.floor(Math.random() * 25))
         }
     }, [progress, dispatch])
 

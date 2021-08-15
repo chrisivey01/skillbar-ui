@@ -9,6 +9,14 @@ export const showSkillbar = () => {
     }
 }
 
+export const closeSkillbar = () => {
+    return (dispatch: Dispatch<any>) => {
+        dispatch({
+            type: "CLOSE_SKILLBAR",
+        })
+    }
+}
+
 export const raiseProgress = (newValue: number) => {
     return (dispatch: Dispatch<any>) => {
         dispatch({
