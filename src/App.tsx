@@ -52,9 +52,17 @@ const App = () => {
       }
     }
 
+
     window.addEventListener('keydown', keyPress)
     return () => window.removeEventListener("keydown", keyPress);
   }, [progress, dial, Nui, dispatch])
+
+  // useEffect(() => {
+  //   if (progress === 100 && process.env.NODE_ENV !== "development") {
+  //     Nui.send("pma-skillbar:response", false)
+  //     dispatch(closeSkillbar())
+  //   }
+  // }, [progress])
 
 
   return (
