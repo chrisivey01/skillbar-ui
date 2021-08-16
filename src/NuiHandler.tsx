@@ -1,7 +1,6 @@
-  
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { showSkillbar } from "./redux/skillbar.actions";
+import React, {useEffect} from "react";
+import {useDispatch} from "react-redux";
+import {showSkillbar} from "./redux/skillbar.actions";
 
 const NuiHandler = () => {
     const dispatch = useDispatch();

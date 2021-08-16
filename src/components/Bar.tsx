@@ -1,9 +1,10 @@
-import { BarContainer } from "./styles";
+import React from "react";
+import {BarContainer} from "./styles";
 
 type SKillType = {
     children: any;
 }
-const Bar = ({ children }: SKillType) => {
+const Bar = ({children}: SKillType) => {
     return <BarContainer>{children}</BarContainer>
 }
 

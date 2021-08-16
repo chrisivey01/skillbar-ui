@@ -1,8 +1,9 @@
-import { useNuiRequest } from "fivem-nui-react-lib";
-import { useEffect } from "react";
-import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
-import { closeSkillbar, raiseProgress } from "../redux/skillbar.actions";
-import { ProgressBar } from "./styles";
+import React from "react";
+import {useNuiRequest} from "fivem-nui-react-lib";
+import {useEffect} from "react";
+import {RootStateOrAny, useDispatch, useSelector} from "react-redux";
+import {closeSkillbar, raiseProgress} from "../redux/skillbar.actions";
+import {ProgressBar} from "./styles";
 
 const Progress = () => {
     const dispatch = useDispatch();
@@ -24,9 +25,9 @@ const Progress = () => {
             Nui.send("pma-skillbar:response", false)
             dispatch(closeSkillbar())
         }
-    }, [progress])
+    }, [progress, show, Nui, dispatch])
 
-    return <ProgressBar width={progress} />
+    return <ProgressBar width={progress}/>
 }
 
 export default Progress;
